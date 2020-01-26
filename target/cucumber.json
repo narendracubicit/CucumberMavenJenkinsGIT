@@ -1,0 +1,78 @@
+[
+  {
+    "line": 1,
+    "elements": [
+      {
+        "line": 4,
+        "name": "FaceBook login",
+        "description": "",
+        "id": "facebook-login;facebook-login",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 41533131500,
+              "status": "passed"
+            },
+            "line": 5,
+            "name": "I open browser",
+            "match": {
+              "location": "FaceBookLoginPage.OpenBrowser()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 84442337000,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "I navigate to facebook page",
+            "match": {
+              "location": "FaceBookLoginPage.navigateToFacebookPage()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 12436948600,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "I login to fb with user \"hello@gmail.com\" and password \"1234\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "hello@gmail.com",
+                  "offset": 25
+                },
+                {
+                  "val": "1234",
+                  "offset": 56
+                }
+              ],
+              "location": "FaceBookLoginPage.loginToFb(String,String)"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "line": 3,
+            "name": "@1234"
+          },
+          {
+            "line": 3,
+            "name": "@login"
+          }
+        ]
+      }
+    ],
+    "name": "FaceBook login",
+    "description": "",
+    "id": "facebook-login",
+    "keyword": "Feature",
+    "uri": "features/facebook.feature"
+  }
+]

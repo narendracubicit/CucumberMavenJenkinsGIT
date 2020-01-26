@@ -1,0 +1,56 @@
+[
+  {
+    "source": "^I login to fb with user \"([^\"]*)\" and password \"([^\"]*)\"$",
+    "steps": [
+      {
+        "name": "I login to fb with user \"hello@gmail.com\" and password \"1234\"",
+        "aggregatedDurations": {
+          "average": 12.4369486,
+          "median": 12.4369486
+        },
+        "durations": [
+          {
+            "duration": 12.4369486,
+            "location": "features/facebook.feature:7"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "source": "^I open browser$",
+    "steps": [
+      {
+        "name": "I open browser",
+        "aggregatedDurations": {
+          "average": 41.5331315,
+          "median": 41.5331315
+        },
+        "durations": [
+          {
+            "duration": 41.5331315,
+            "location": "features/facebook.feature:5"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "source": "^I navigate to facebook page$",
+    "steps": [
+      {
+        "name": "I navigate to facebook page",
+        "aggregatedDurations": {
+          "average": 84.442337,
+          "median": 84.442337
+        },
+        "durations": [
+          {
+            "duration": 84.442337,
+            "location": "features/facebook.feature:6"
+          }
+        ]
+      }
+    ]
+  }
+]
