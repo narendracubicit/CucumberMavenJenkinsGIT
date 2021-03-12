@@ -11,6 +11,9 @@ import cucumber.api.java.en.And;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import io.github.bonigarcia.wdm.WebDriverManager;
+import org.openqa.selenium.chrome.ChromeOptions;
+import java.util.Map;
+import java.util.HashMap;
 
 public class FaceBookLoginPage {
 	
@@ -24,7 +27,16 @@ public class FaceBookLoginPage {
 	public void OpenBrowser() {
 		WebDriverManager.chromedriver().setup();
 		driver = new ChromeDriver();
-		driver.manage().window().maximize();
+		ChromeOptions options = new ChromeOptions();
+				Map<String, Object> prefs = new HashMap<String, Object>();
+				prefs.put("profile.default_content_settings.popups", 0);
+				prefs.put("safebrowsing.enabled", "false");
+				prefs.put("download.prompt_for_download", "false");
+				prefs.put("profile.default_content_setting_values.notifications", 1);
+				prefs.put("profile.default_content_setting_values.automatic_downloads", 1);
+		options.setExperimentalOption("prefs", prefs);
+		options.addArguments("--no-sandbox", "--start-maximized", "--headless", "--disable-gpu", "window-size=1920,1080", "--disable-dev-shm-usage", "--disable-extensions", "disable-infobars", "--use-fake-ui-for-media-stream");
+// 		driver.manage().window().maximize();
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 		System.out.println("driver initialized");
 	}
